@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 5px;
     background-color: #f0f0f0;
 }
 
@@ -9,14 +9,24 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.deadline {
+    color: red;
 }
 
 .title {
+    text-align: center;
     color: #333;
+    margin-bottom: 20px;
 }
 
 .input-container {
     margin-bottom: 20px;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .input {
@@ -40,27 +50,33 @@ body {
     background-color: #0056b3;
 }
 
-.main-container {
+.columns-container {
     display: flex;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-between;
+    margin: 20px 0;
+    width: 1100px;
 }
 
 .column {
     flex: 1;
     margin: 10px;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px);
+    overflow: hidden;
 }
+
 
 .column-title {
     padding: 10px;
     margin: 0;
-    background-color: #007bff;
+    background-color: #1a320f;
     color: #fff;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    text-align: center;
+    overflow: hidden;
 }
 
 .list {
@@ -75,6 +91,7 @@ body {
 
 .cart p {
     margin: 5px 0;
+    margin-bottom: 15px
 }
 
 .cart button {
@@ -93,12 +110,59 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    .main-container {
+    .columns-container {
         flex-direction: column;
-        align-items: center;
     }
 
     .column {
+        width: 100%;
+        margin: 0 0 20px;
+    }
+
+    .input-container {
         width: 80%;
     }
+}
+
+.create-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-button:hover {
+    background-color: #45a049;
+}
+
+.cart .delete-button {
+    padding: 5px 10px;
+    background-color: #d73737;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart .delete-button:hover {
+    background-color: #ff0000;
+}
+
+.planned-column {
+    background-color: #427322;
+}
+.in-progress-column {
+    background-color: #83a958;
+}
+
+.testing-column {
+    background-color: #a3c185;
+}
+
+.completed-column {
+    background-color: #d8e5c6;
 }
