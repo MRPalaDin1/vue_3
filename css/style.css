@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+}
+
+.columns-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    padding: 60px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    flex-grow: 1;
+    margin: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        flex-basis: calc(100% - 20px);
+        margin-right: 0;
+    }
+}
+
+header {
+    text-align: center;
+    width: 100%;
+}
